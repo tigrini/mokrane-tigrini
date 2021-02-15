@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.accuil {
+  background-color: #F2F2F2;
+  padding-bottom: 3rem;
+  border-top: 3px solid #9c9898;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  background-color: #dfdbdb;
+}
+
+.maps {
+  margin: 15px;
+}
+
+.description {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.btn {
+  background-color: #ff55d0;
+  color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 200px;
+  margin: auto;
+  box-shadow: 0px 5px 10px gray;
+}
+
+.fonctionnement {
+  width: 90%;
+  margin: auto;
+}
+
+.element {
+  background-color: #F2F2F2;
+  display: flex;
+  margin: 15px;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px gray;
+  transition-duration: 600ms;
+}
+.element:hover {
+  background-color: #dcc6f5;
+}
+.element:hover i {
+  color: #9356DC;
+}
+
+.element i {
+  margin: 17px;
+}
+
+.nombre {
+  position: absolute;
+  background-color: #9356DC;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1rem;
+  margin-top: 14px;
+  margin-left: 5px;
+}
+
+.container {
+  background-color: #F2F2F2;
+  padding-bottom: 1rem;
+}
+.container h1 {
+  margin-left: 25px;
+  padding-top: 20px;
+}
+.container .restaurant {
+  width: 85%;
+  height: 220px;
+  margin: auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px gray;
+  margin-bottom: 15px;
+}
+.container .restaurant img {
+  width: 100%;
+  height: 65%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.container .restaurant .text {
+  display: flex;
+  justify-content: space-between;
+}
+.container .restaurant .text h1 {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+.container .restaurant .text p {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.container .restaurant .text .icone {
+  padding: 1rem;
+}
+
+.bas-de-page {
+  background-color: #2b2424;
+  padding: 1rem;
+}
+.bas-de-page img {
+  width: 30%;
+}
+.bas-de-page p {
+  color: white;
+}
+
+.elements {
+  display: flex;
+}
+.elements i {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
