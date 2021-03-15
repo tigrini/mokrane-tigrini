@@ -1,6 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
 body {
   font-family: 'Raleway', sans-serif;
+}
+ 
+.charge {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fondu 3s ease-out;
+  transform: scale(0);
+  top: 0;
+  left: 0;
+  
+  
+
+  .lettre {
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.1s linear infinite;
+    
+    
+  }
+}
+@keyframes flash {
+
+  0%{
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900;
+  }
+  90%{
+    color: #484848;
+    text-shadow: none;
+  }
+  100%{
+    color: #fff900;
+    text-shadow: 0 0 7px #484848;
+  }
+}
+@keyframes fondu {
+  0%{
+    transform:scale(1);
+    opacity: 1;
+    
+  }
+  78%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  90%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+  
+  
+  
+
+
+h1 {
+  font-size: 1.3rem;
+}
+header {
+  img {
+    width: 200px;
+    margin: auto;
+    display: flex;
+  }
 }
 .accuil {
     background-color:  #F2F2F2;
@@ -12,129 +90,174 @@ body {
     display: flex;
     justify-content: center;
     background-color: rgb(223, 219, 219);
-  }
+}
   
-  .maps {
+.maps {
     margin: 15px;
     
-  }
+}
   
-  .description {
-    width: 80%;
-    text-align: center;
-    margin: auto;
-  }
+.description {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
 
-  $primary: #9356DC;
-  $secondary: #FF79DA;
-  $tertiary: #99E2D0;
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
   
-  .btn {
-    background-color: darken($secondary,7);
-    color: white;
-    padding: 1rem;
+.btn {
+  background-color: $secondary;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 200px;
+  margin: auto;
+  box-shadow: 0px 5px 10px gray;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1rem;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
     border-radius: 2rem;
-    width: 200px;
-    margin: auto;
-    box-shadow: 0px 5px 10px gray;
+    background-color: darken($secondary,5);
+    opacity: 0;
+    transition: opacity 250ms;
+    z-index: -1;
+  }
 
-    
-  }
-  .fonctionnement {
-    width: 90%;
-    margin: auto;
-  }
-  .element {
-      background-color:  #F2F2F2;
-      display: flex;
-      margin: 15px;
-      border-radius: 1rem;
-      box-shadow: 0px 5px 10px gray;
-      transition-duration: 600ms;
-      &:hover {
-        background-color: hsl(268, 71%, 87%);;
-        & i{
+}
+
+.fonctionnement {
+  width: 90%;
+  margin: auto;
+}
+.element {
+  background-color:  #F2F2F2;
+  display: flex;
+  margin: 15px;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px gray;
+  transition-duration: 600ms;
+
+  &:hover {
+    background-color: hsl(268, 71%, 87%);;
+    & i{
           color: $primary;
-        }
       }
+   }
       
+}
+.element i {
+  margin: 17px;
+      
+}
+.nombre {
+  position: absolute;
+  background-color: $primary;
+  
+  
+
+  color: white;
+  margin-top: 15px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 4px;
+  padding-top: 0;
+  margin-left: 5px;
+  border-radius: 30px;
+}
+.container {
+  background-color:  #F2F2F2;
+  padding-bottom: 1rem;
+  h1 {
+    margin-left: 25px;
+    padding-top: 20px;
   }
-  .element i {
-      margin: 17px;
-      
-  }
-  .nombre {
-      position: absolute;
-      background-color: $primary;
-      padding: 0.1rem 0.4rem;
-      border-radius: 1rem;
-      margin-top: 14px;
-      margin-left: 5px;
-      
-      
-      
-  }
-  .container {
-      background-color:  #F2F2F2;
-      padding-bottom: 1rem;
-      & h1 {
-        margin-left: 25px;
-        padding-top: 20px;
-      }
     
-      & .restaurant{
-          width: 85%;
-          height: 220px;
-          margin: auto;
-          background-color: white;
-          border-radius: 1rem;
-          box-shadow: 0px 5px 10px gray;
-          margin-bottom: 15px;
-      & img {
-          width: 100%;
-          height: 65%;
-          border-top-left-radius: 1rem;
-          border-top-right-radius: 1rem;
-      }
-      & .text {
+  .restaurant{
+     width: 85%;
+     height: 220px;
+     margin: auto;
+     background-color: white;
+     border-radius: 1rem;
+     box-shadow: 0px 5px 10px gray;
+     margin-bottom: 15px;
+     
+
+    img {
+      width: 100%;
+      height: 65%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      object-fit: cover;
+    }
+    .text {
+      display: flex;
+      justify-content: space-between;
         
-        display: flex;
-        justify-content: space-between;
-        
-        & h1 {
-         margin: 0;
+      h1 {
+          margin: 0;
           padding: 0;
           margin-left: 10px;
-        }
-        & p {
+      }
+      p {
           
-          margin: 0;
-          margin-left: 10px;
-          margin-top: 5px;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+      .icone  {
+        font-size: 1.5rem;
+        padding: 1rem;
+        position: relative;
+        cursor: pointer;
+        margin: 0;
+
+        :active {
+          opacity: 1;
+          transition-duration:  400ms;
+          color: $primary;
         }
-        & .icone  {
-          padding: 1rem;
+          
+        &__noir {
+          position: absolute;
+          opacity: 0;
+            
         }
       }
-
     }
+
   }
-  .bas-de-page {
-    background-color: rgb(43, 36, 36);
-    padding: 1rem;
-    & img {
+
+}
+.bas-de-page {
+  background-color: rgb(43, 36, 36);
+  padding: 1rem;
+  img {
       width: 30%;
       
-    }
-    & p {
-      color: white;
-    }
   }
-  .elements {
-    display: flex;
-    & i {
-      padding-top: 1rem;
-      padding-right: 1rem;
-      color: white;
-    }
+  p {
+    color: white;
   }
+}
+.elements {
+  display: flex;
+ i {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    color: white;
+  }
+}
