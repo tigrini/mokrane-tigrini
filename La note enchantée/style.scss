@@ -53,7 +53,7 @@ p {
     
     
 }
-.exo {
+.container {
     
     width: 100%;
     position: relative;
@@ -76,7 +76,7 @@ p {
         }
     }
 }
-.entreestitre{
+.menu {
     margin-left: 20px;
     border-bottom: 2px solid #99E2D0 ;
     width: 25px;
@@ -86,27 +86,25 @@ p {
 $cd-primary: #9356DC; 
 $cd-secondary: #FF79DA;
 $cd-tertiary: #99E2D0;
-$num-entree: 3;
+$num-entree: 4;
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / $num-entree;
-.entree {
+
+.btn {
     background-color: white;
     box-shadow:  0px 5px 10px gray;
     display: flex;
     justify-content: space-between;
     border-radius: 1rem;
     margin: 1rem;
-    animation: entree $anim-dur ease-in-out backwards;
-    
-
-    
-    
-
+    overflow: hidden;
+    animation: btn $anim-dur ease-in-out backwards;
     position: relative;
     cursor: pointer;
+
     &:active {
-        .icon {
-        transform: scaleX(1);
+        .charge {
+        transform: scaleX(1)
+        
         }
         .prix {
             right: 60px;
@@ -114,6 +112,12 @@ $anim-delay: $anim-dur / $num-entree;
         }
         p {
             width: 150px;
+        }
+        h3 {
+            width: 180px;
+        }
+        .icon {
+        transform: rotate(0turn);
         }
     }
     
@@ -123,7 +127,10 @@ $anim-delay: $anim-dur / $num-entree;
     h3 {
        margin-bottom: 5px; 
        margin-left: 10px;
-       
+       text-overflow: ellipsis;
+       overflow: hidden;
+       white-space: nowrap;
+       width: 230px;
     }
     p {
         margin-top: 0;
@@ -146,45 +153,56 @@ $anim-delay: $anim-dur / $num-entree;
         
     
     }
-    .icon {
+    .charge {
         background-color: $cd-tertiary;
-        
-        padding: 1.43rem;
         position: absolute;
-        border-top-right-radius: 1rem;
+        padding: 1.14rem;
         border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
         transform: scaleX(0);
         transition: transform 400ms ease-in-out ;
         transform-origin: right;
         right: 0;
+        align-items: center;
         
+    }
+    .icon {
+        transform: rotate(-1turn);
+        transition: transform 500ms ease-in-out;
+        color: white;
+        font-size: 1.5rem;
+
         
+
     }
    
 
 }
-@keyframes entree {
+@keyframes btn {
     0% {
-        transform: scaleY(1);
+        
         opacity: 0;
     }
     100% {
-        transform: scaleY(1.0);
+        
         opacity: 1;
     }
 }
-.entree--1 {
+.btn--1 {
     animation-delay: 200ms;
     
     
 }
-.entree--2 {
+.btn--2 {
     animation-delay: 400ms;
     
 }
-.entree--3 {
+.btn--3 {
     animation-delay: 600ms;
     
+}
+.btn--4 {
+    animation-delay: 800ms;
 }
 
 
@@ -236,84 +254,17 @@ $anim-delay: $anim-dur / $num-entree;
     p {
       color: white;
     }
-  }
-  .elements {
+}  
+.elements {
     display: flex;
     & i {
       padding-top: 1rem;
       padding-right: 1rem;
       color: white;
     }
-  }
-  .entree1 {
-    background-color: white;
-    box-shadow:  0px 5px 10px gray;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 1rem;
-    margin: 1rem;
-    animation: $anim-dur;
-    position: relative;
-    cursor: pointer;
-    &:active {
-        .icon1 {
-        transform: scaleX(1);
-        }
-        .prix1 {
-            right: 50px;
-        }
-        p {
-            width: 100px;
-        }
-        
-    }
-    
-
-    
-    
-    h3 {
-       margin-bottom: 5px; 
-       margin-left: 10px;
-       
-    }
-    p {
-        margin-top: 0;
-        margin-left: 10px;
-        text-overflow: ellipsis;
-        display: block;
-        width: 200px;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    .prix1 {
-        margin-top: 33px;
-        margin-right: 17px;
-        transition: transform 400ms ease-in-out ;
-        transform-origin: right;
-        position: relative;
-        
-        
-    
-    }
-    
-        
-        .icon1 {
-        background-color: $cd-tertiary;
-        padding: 1.4rem;
-        right: 0;
-        position: absolute;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        transform: scaleX(0);
-        transition: transform 400ms ease-in-out ;
-        transform-origin: right;
-        
-        }
-
-
 }
 
-
+ 
     
     
     

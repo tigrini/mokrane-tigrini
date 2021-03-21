@@ -23,7 +23,7 @@ body {
 
   .lettre {
     color: #484848;
-    font-size: 80px;
+    font-size: 20px;
     letter-spacing: 15px;
     margin-bottom: 150px;
     animation: flash 1.1s linear infinite;
@@ -166,9 +166,6 @@ $tertiary: #99E2D0;
 .nombre {
   position: absolute;
   background-color: $primary;
-  
-  
-
   color: white;
   margin-top: 15px;
   padding-right: 7px;
@@ -177,6 +174,19 @@ $tertiary: #99E2D0;
   padding-top: 0;
   margin-left: 5px;
   border-radius: 30px;
+}
+.nombre1 {
+  position: absolute;
+  background-color: $primary;
+  color: white;
+  margin-top: 15px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 4px;
+  padding-top: 0;
+  margin-left: 5px;
+  border-radius: 30px;
+
 }
 .container {
   background-color:  #F2F2F2;
@@ -246,7 +256,7 @@ $tertiary: #99E2D0;
   background-color: rgb(43, 36, 36);
   padding: 1rem;
   img {
-      width: 30%;
+      width: 10rem;
       
   }
   p {

@@ -1,4 +1,5 @@
-@import url("://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -45,7 +46,7 @@ p {
   object-fit: cover;
 }
 
-.exo {
+.container {
   width: 100%;
   position: relative;
   margin-top: 175px;
@@ -54,50 +55,70 @@ p {
   background-color: #F2F2F2;
   padding-bottom: 5rem;
 }
-.exo .titre {
+.container .titre {
   display: flex;
   justify-content: space-around;
 }
-.exo .titre h1 {
-  font-style: oblique 90deg;
+.container .titre h1 {
+  font-family: "Shrikhand", cursive;
 }
-.exo .titre i {
+.container .titre i {
   padding-top: 1.7rem;
   font-size: 1.3rem;
 }
 
-.entreestitre {
+.menu {
   margin-left: 20px;
   border-bottom: 2px solid #99E2D0;
   width: 25px;
   height: 20px;
 }
 
-.entree {
+.btn {
   background-color: white;
   box-shadow: 0px 5px 10px gray;
   display: flex;
   justify-content: space-between;
   border-radius: 1rem;
   margin: 1rem;
-  animation: entree 1000ms ease-in-out backwards;
+  overflow: hidden;
+  animation: btn 1000ms ease-in-out backwards;
   position: relative;
   cursor: pointer;
 }
-.entree:active .icon {
+.btn:active .charge {
   transform: scaleX(1);
 }
-.entree:active .prix {
+.btn:active .charge1 {
+  transform: scaleX(1);
+}
+.btn:active .prix {
   right: 60px;
 }
-.entree:active p {
+.btn:active .prix1 {
+  right: 60px;
+}
+.btn:active p {
   width: 150px;
 }
-.entree h3 {
+.btn:active h3 {
+  width: 180px;
+}
+.btn:active .icon {
+  transform: rotate(0turn);
+}
+.btn:active .icon1 {
+  transform: rotate(0turn);
+}
+.btn h3 {
   margin-bottom: 5px;
   margin-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 230px;
 }
-.entree p {
+.btn p {
   margin-top: 0;
   margin-left: 10px;
   text-overflow: ellipsis;
@@ -105,44 +126,72 @@ p {
   white-space: nowrap;
   width: 230px;
 }
-.entree .prix {
+.btn .prix {
   margin-top: 33px;
   margin-right: 30px;
   position: relative;
   transition: 0.4s;
   right: 0px;
 }
-.entree .icon {
+.btn .charge {
   background-color: #99E2D0;
-  padding: 1.43rem;
   position: absolute;
-  border-top-right-radius: 1rem;
+  padding: 1.14rem;
   border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
   transform: scaleX(0);
   transition: transform 400ms ease-in-out;
   transform-origin: right;
   right: 0;
 }
+.btn .icon {
+  transform: rotate(-1turn);
+  transition: transform 500ms ease-in-out;
+  color: white;
+  font-size: 1.5rem;
+}
+.btn .prix1 {
+  margin-top: 50px;
+  margin-right: 30px;
+  position: relative;
+  transition: 0.4s;
+  right: 0px;
+}
+.btn .charge1 {
+  background-color: #99E2D0;
+  position: absolute;
+  padding: 1.65rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: right;
+  right: 0;
+}
+.btn .icon1 {
+  transform: rotate(-1turn);
+  transition: transform 500ms ease-in-out;
+  color: white;
+  font-size: 1.5rem;
+}
 
-@keyframes entree {
+@keyframes btn {
   0% {
-    transform: scaleY(1);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
-.entree--1 {
+.btn--1 {
   animation-delay: 200ms;
 }
 
-.entree--2 {
+.btn--2 {
   animation-delay: 400ms;
 }
 
-.entree--3 {
+.btn--3 {
   animation-delay: 600ms;
 }
 
@@ -197,58 +246,6 @@ p {
   padding-top: 1rem;
   padding-right: 1rem;
   color: white;
-}
-
-.entree1 {
-  background-color: red;
-  box-shadow: 0px 5px 10px gray;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 1rem;
-  margin: 1rem;
-  animation: 1000ms;
-  position: relative;
-  cursor: pointer;
-}
-.entree1:active .icon1 {
-  transform: scaleX(1);
-}
-.entree1:active .prix1 {
-  right: 50px;
-}
-.entree1:active p {
-  width: 100px;
-}
-.entree1 h3 {
-  margin-bottom: 5px;
-  margin-left: 10px;
-}
-.entree1 p {
-  margin-top: 0;
-  margin-left: 10px;
-  text-overflow: ellipsis;
-  display: block;
-  width: 200px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.entree1 .prix1 {
-  margin-top: 33px;
-  margin-right: 17px;
-  transition: transform 400ms ease-in-out;
-  transform-origin: right;
-  position: relative;
-}
-.entree1 .icon1 {
-  background-color: #99E2D0;
-  padding: 1.4rem;
-  right: 0;
-  position: absolute;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  transform: scaleX(0);
-  transition: transform 400ms ease-in-out;
-  transform-origin: right;
 }
 
 /*# sourceMappingURL=style.css.map */
