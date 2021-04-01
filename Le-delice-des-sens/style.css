@@ -238,6 +238,9 @@ p {
 .bas-de-page p {
   color: white;
 }
+.bas-de-page a {
+  text-decoration: none;
+}
 
 .elements {
   display: flex;

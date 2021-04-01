@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url("://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -232,6 +232,9 @@ header img {
 }
 .bas-de-page p {
   color: white;
+}
+.bas-de-page a {
+  text-decoration: none;
 }
 
 .elements {

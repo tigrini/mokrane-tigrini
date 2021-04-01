@@ -1,0 +1,145 @@
+@import url( '://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+body
+{
+   font-family: 'Raleway', sans-serif;
+   
+}
+.accueil  {
+    display: flex;
+    .logo {
+        
+        width: 16rem;
+        margin: auto;
+    
+        img {
+            width: 14rem;
+            padding: 0.5rem;
+            
+        }
+    }
+    .retour {
+        font-size: 1.2rem;
+        padding: 1rem;
+        a {
+            color: rgb(104, 102, 102);
+        }
+    } 
+}
+
+$cd-box: #99E2D0;
+$cd-txt: #6300a0;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+.container {
+    height: 100%;
+    background-color:  #F2F2F2;
+    padding: 20px;
+}
+.form {
+    
+    background-color: wheat;
+    width: 60%;
+    box-shadow:  0px 5px 10px gray;
+    padding: 20px;
+    &__group {
+    
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        
+        
+        
+        
+
+        & input {
+            border: 2px solid $cd-box;
+            color: $cd-txt;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            padding: .2rem;
+            width: 200px;
+            margin-bottom: 30px;
+            
+        
+            
+            
+            
+        }
+        & textarea {
+            border: 2px solid $cd-box;
+            color: $cd-txt;
+            font-family: 'montserrat', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 30px;
+        
+            
+
+
+        }
+        & label {
+            font-family: 'montserrat', sans-serif;
+            color: $cd-txt;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            
+        }
+        & button {
+            width: 100px;
+            height: 40px;
+        
+            color: white;
+            background-color: $cd-txt;
+            font-family: 'montserrat', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            margin: auto;
+        }
+    }
+}
+.bas-de-page {
+    background-color: rgb(43, 36, 36);
+    padding: 1rem;
+    
+    img {
+      width: 10rem;
+      
+    }
+    p {
+      color: white;
+    }
+}  
+.elements {
+    display: flex;
+    & i {
+      padding-top: 1rem;
+      padding-right: 1rem;
+      color: white;
+    }
+}
+@media all and (max-width: 480px){
+    .container {
+        padding: 10px;
+    }
+
+    .form {
+        width: auto;
+        height: 470px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    
+}
+
+ 
+    
+    
+    
+
+    
+    
+    
+ 

@@ -83,6 +83,7 @@ p {
     width: 25px;
     height: 20px;
     
+    
 }
 $cd-primary: #9356DC; 
 $cd-secondary: #FF79DA;
@@ -249,7 +250,12 @@ $anim-delay: $anim-dur / $num-entree;
     }
     p {
       color: white;
+      
     }
+    a {
+        text-decoration: none;
+    }
+    
 }  
 .elements {
     display: flex;
@@ -259,6 +265,8 @@ $anim-delay: $anim-dur / $num-entree;
       color: white;
     }
 }
+
+
 
  
     

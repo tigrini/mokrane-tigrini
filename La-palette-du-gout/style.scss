@@ -249,6 +249,9 @@ $anim-dur: 1000ms;
     p {
       color: white;
     }
+    a {
+        text-decoration: none;
+    }
 }  
 .elements {
     display: flex;
