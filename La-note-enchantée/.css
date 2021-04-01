@@ -134,6 +134,7 @@ p {
   transition: transform 400ms ease-in-out;
   transform-origin: right;
   right: 0;
+  align-items: center;
 }
 .btn .icon {
   transform: rotate(-1turn);
@@ -160,6 +161,10 @@ p {
 
 .btn--3 {
   animation-delay: 600ms;
+}
+
+.btn--4 {
+  animation-delay: 800ms;
 }
 
 .commander {
